@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Exchange Rate Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exchange Rate Calculator</h1>
+        <p>Select currencies and enter the amount to convert.</p>
+        <div class="form">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+
+            <label for="fromCurrency">From Currency:</label>
+            <div class="currency-wrapper">
+                <select id="fromCurrency"></select>
+            </div>
+
+            <button id="reverseBtn">⇄</button>
+
+            <label for="toCurrency">To Currency:</label>
+            <div class="currency-wrapper">
+                <select id="toCurrency"></select>
+            </div>
+
+            <label for="fee">Transaction Fee (%):</label>
+            <input type="number" id="fee" placeholder="Enter fee percentage">
+
+            <button id="convertBtn">Convert</button>
+        </div>
+
+        <div id="result" class="result">
+            <p>Conversion result will appear here.</p>
+        </div>
+
+        <canvas id="chart" class="chart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
